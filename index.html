@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Store | Home</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: white; }
+        a { text-decoration: none; color: black; }
+
+        .top-nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 15px 30px; 
+            background-color: black; 
+            border-bottom: 1px solid #333;
+        }
+        .store-name { font-size: 24px; font-weight: bold; color: #28a745; }
+        .top-right { display: flex; align-items: center; gap: 20px; }
+        .top-nav a { color: white; }
+        .profile-logo { width: 40px; height: 40px; border-radius: 50%; border: 1px solid #ccc; }
+
+        .banner-image { 
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; 
+            display: block; 
+        }
+
+        .sec-nav { 
+            text-align: center; 
+            margin-top: 30px; 
+            margin-bottom: 20px;
+        }
+        .sec-nav a { 
+            background-color: #28a745; 
+            color: white; 
+            margin: 0 10px; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .sec-nav a:hover { 
+            background-color: #218838; 
+        }
+
+        .search-container { text-align: center; padding: 10px 20px 30px 20px; }
+        .search-container input { width: 300px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        .search-container button { padding: 10px 20px; background-color: #333; color: white; border: none; border-radius: 4px; cursor: pointer; }
+
+       
+        .books-grid { 
+            max-width: 1300px;
+            margin: 0 auto; 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            justify-content: center; 
+            padding-bottom: 50px;
+        }
+        .book-card { 
+            background: white; 
+            border: 1px solid #ddd; 
+            padding: 15px; 
+            width: 220px; 
+            text-align: center; 
+            border-radius: 8px;
+        }
+        .book-card img { width: 100%; height: 250px; object-fit: contain; margin-bottom: 10px; }
+        
+        .stars { color: #f39c12; font-size: 14px; margin-bottom: 5px; }
+        
+        .button-group { display: flex; gap: 10px; margin-top: 10px; }
+        .btn { padding: 10px; border: none; cursor: pointer; border-radius: 4px; width: 100%; text-align: center; font-size: 14px; }
+        .btn-cart { background: #28a745; color: white; }
+        .btn-buy { background: #ff9900; color: black; }
+    </style>
+</head>
+<body>
+
+    <div class="top-nav">
+        <div class="store-name">Book Bags</div>
+        <div class="top-right">
+            <a href="userlogin.html">Login / Sign Up</a>
+            <a href="profile.html">
+                <img src="images/random%20shit/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.webp" alt="Profile" class="profile-logo">
+            </a>
+        </div>
+    </div>
+
+    <img src="images/random%20shit/360_F_354296454_0c5wDTLn3wsqXwru1fEekghkJaCkERL4.jpg" alt="Banner image featuring books and store promotions" class="banner-image">
+
+    <div class="sec-nav">
+        <a href="index.html">Home</a>
+        <a href="#">New Release</a>
+        <a href="#">Favorites</a>
+        <a href="bookscatlog.html">Book Catalog</a>
+        <a href="cart.html">Cart</a>
+        <a href="#">My Purchase</a>
+    </div>
+
+    <div class="search-container">
+        <input type="text" placeholder="Search for the book">
+        <button>Search</button>
+    </div>
+
+    <div class="books-grid">
+        
+        <div class="book-card">
+            <img src="images/random%20shit/Unstuck_ EbookCover.jpg" alt="Book Cover">
+            <h3>Unstuck</h3>
+            <div class="stars">⭐⭐⭐⭐☆</div>
+            <p>₹350</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/random%20shit/unnamed.jpg" alt="Book Cover">
+            <h3>A walk in the woods</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>₹499</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/random%20shit/a99db7ea01ae9e47114aee1f2d7f96d1.jpg" alt="Book Cover">
+            <h3>The Battle For the Fae king throne</h3>
+            <div class="stars">⭐⭐⭐☆☆</div>
+            <p>₹550</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/random%20shit/i_Inspirational-Book-Cover_full.jpg" alt="Book Cover">
+            <h3>The art of love</h3>
+            <div class="stars">⭐⭐⭐⭐☆</div>
+            <p>₹299</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/random%20shit/black-modern-&-minimal-book-cover-kindle-book-design-template-3eed3de69c4d55a4d0164f95abd74a96.webp" alt="Book Cover">
+            <h3>How to find your self</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>₹399</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/random%20shit/images%20(1).jpg" alt="Book Cover">
+            <h3>The blind boxer</h3>
+            <div class="stars">⭐⭐⭐⭐☆</div>
+            <p>₹450</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/movies/{4434B5B4-B74A-4FE6-B352-57B6871737FD}Img400.jpg" alt="Book Cover">
+            <h3>The Wolf of Wall Street</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>₹599</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/movies/35_912541_0_InvincibleIronManVol41G_c7e8d071-6d06-49ee-bfc9-4a5cce536ebd.jpg" alt="Book Cover">
+            <h3>The Invincible Iron Man</h3>
+            <div class="stars">⭐⭐⭐⭐☆</div>
+            <p>₹250</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/movies/91BPTaok5JL._AC_UF1000,1000_QL80_.jpg" alt="Book Cover">
+            <h3>The Amazing Spider-Man</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>₹199</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/movies/9780007116256-us-300.jpg" alt="Book Cover">
+            <h3>The Lord of the Rings</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>₹899</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/movies/images (1).jpg" alt="Book Cover">
+            <h3>Game of Thrones</h3>
+            <div class="stars">⭐⭐⭐⭐☆</div>
+            <p>₹750</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/movies/images.jpg" alt="Book Cover">
+            <h3>Harry Potter & Azkaban</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>₹650</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/movies/iron-man-comic-cover-based-on-the-2008-movie-v0-mwxd0z8sr3cc1.webp" alt="Book Cover">
+            <h3>Iron Man</h3>
+            <div class="stars">⭐⭐⭐☆☆</div>
+            <p>₹299</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/movies/spider-man-noir-fake-cover-by-me-two-options-v0-67kakcjil6bb1.webp" alt="Book Cover">
+            <h3>Spider-Man Noir</h3>
+            <div class="stars">⭐⭐⭐⭐☆</div>
+            <p>₹350</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/movies/the-jungle-book-year-2016-usa-director-jon-favreau-neel-sethi-movie-G3R9PR.jpg" alt="Book Cover">
+            <h3>The Jungle Book</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>₹250</p>
+            <div class="button-group">
+                <a href="#" class="btn btn-cart">Cart</a>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

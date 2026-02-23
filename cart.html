@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Cart | Book Store</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 40px; 
+            background-color: white;
+            max-width: 800px; 
+            margin: auto; 
+        }
+        h1 { border-bottom: 2px solid black; padding-bottom: 10px; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; border: 1px solid black; }
+        th, td { border: 1px solid black; padding: 15px 10px; text-align: center; }
+        th { background-color: #eee; }
+        
+        .cart-img { width: 60px; height: 80px; object-fit: contain; }
+        
+        .checkout-btn { 
+            background: #28a745; 
+            padding: 10px 20px; 
+            text-decoration: none; 
+            color: white; 
+            float: right; 
+            margin-top: 20px; 
+            border: 1px solid black;
+        }
+        
+        .remove { color: red; text-decoration: underline; font-size: 14px; }
+    </style>
+</head>
+<body>
+    
+    <h1>Your Shopping Cart</h1>
+    
+    <table>
+        <tr>
+            <th>Image</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        
+        <tr>
+            <td><img src="images/random%20shit/Unstuck_%20EbookCover.jpg" class="cart-img"></td>
+            <td>Unstuck</td>
+            <td>1</td>
+            <td>₹350</td>
+            <td><a href="#" class="remove">Remove</a></td>
+        </tr>
+
+        <tr>
+            <td><img src="images/movies/{4434B5B4-B74A-4FE6-B352-57B6871737FD}Img400.jpg" class="cart-img"></td>
+            <td>The Wolf of Wall Street</td>
+            <td>1</td>
+            <td>₹599</td>
+            <td><a href="#" class="remove">Remove</a></td>
+        </tr>
+
+        <tr>
+            <td colspan="3" style="text-align: right; padding-right: 20px;"><b>Total</b></td>
+            <td><b>₹949</b></td>
+            <td></td>
+        </tr>
+    </table>
+    
+    <br>
+    <a href="payment.html" class="checkout-btn">Proceed to Payment</a>
+
+    <a href="index.html" style="display: inline-block; margin-top: 30px; color: black; text-decoration: underline;">Go Back to Home</a>
+
+</body>
+</html>

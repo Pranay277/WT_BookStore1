@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login & Sign Up | Book Store</title>
+    <style>
+        body { 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh;
+            font-family: sans-serif; 
+            background: #eee; 
+            gap: 40px;
+            margin: 0;
+            padding: 40px 0;
+        }
+        .box { 
+            background: white; 
+            padding: 30px; 
+            border: 1px solid #ccc; 
+            border-radius: 8px; 
+            width: 300px; 
+        }
+        input { 
+            width: 100%; 
+            padding: 8px; 
+            margin: 10px 0; 
+            box-sizing: border-box;
+        }
+        .btn { 
+            width: 100%; 
+            background: #28a745; 
+            color: white; 
+            border: none; 
+            padding: 10px; 
+            cursor: pointer; 
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <center><h2>Login</h2></center>
+        <label>Username:</label>
+        <input type="text" placeholder="Enter Username">
+        
+        <label>Password:</label>
+        <input type="password" placeholder="Enter Password">
+        
+        <button class="btn" onclick="location.href='index.html'">Login</button>
+
+        <p style="text-align: center; margin-top: 15px;">Don't have an account? <a href="SignUp.html">Sign Up</a></p>
+
+    </div>
+
+</body>
+</html>

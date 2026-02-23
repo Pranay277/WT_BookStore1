@@ -1,0 +1,60 @@
+<html>
+    <body>
+        <head><title>Login & Sign Up | Book Store</title>
+    <style>
+        body { 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh;
+            font-family: sans-serif; 
+            background: #eee; 
+            gap: 40px;
+            margin: 0;
+            padding: 40px 0;
+        }
+        .box { 
+            background: white; 
+            padding: 30px; 
+            border: 1px solid #ccc; 
+            border-radius: 8px; 
+            width: 300px; 
+        }
+        input { 
+            width: 100%; 
+            padding: 8px; 
+            margin: 10px 0; 
+            box-sizing: border-box;
+        }
+        .btn { 
+            width: 100%; 
+            background: #28a745; 
+            color: white; 
+            border: none; 
+            padding: 10px; 
+            cursor: pointer; 
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+    </style></head>
+        <div class="box" style="background: white; padding: 30px;  border: 1px solid #ccc; border-radius: 8px; width: 300px;">
+            <center><h2 id="signup">Sign Up</h2></center>
+            <label>Username:</label>
+            <input type="text" placeholder="Enter Username">
+            <label>Email:</label>
+            <input type="email" placeholder="Enter Email">
+            <label>Password:</label> 
+            <input type="password" placeholder="Enter Password">
+            <label>Confirm Password:</label>
+            <input type="password" placeholder="Confirm Password">
+            <br><br>
+            <button class="btn" style="width: 100%; background: #28a745; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px; margin-top: 10px;" onclick="location.href='index.html'">Sign Up</button>
+
+            <p style="text-align: center; margin-top: 15px;">Already have an account? <a href="userlogin.html">Login</a></p>   
+        </div>
+    </body>
+</html>
