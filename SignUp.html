@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html>
-    <body>
-        <head><title>Login & Sign Up | Book Store</title>
+<head>
+    <title>Login & Sign Up | Book Store</title>
     <style>
         body { 
             display: flex; 
@@ -40,21 +41,87 @@
         .btn:hover {
             background: #218838;
         }
-    </style></head>
-        <div class="box" style="background: white; padding: 30px;  border: 1px solid #ccc; border-radius: 8px; width: 300px;">
-            <center><h2 id="signup">Sign Up</h2></center>
-            <label>Username:</label>
-            <input type="text" placeholder="Enter Username">
-            <label>Email:</label>
-            <input type="email" placeholder="Enter Email">
-            <label>Password:</label> 
-            <input type="password" placeholder="Enter Password">
-            <label>Confirm Password:</label>
-            <input type="password" placeholder="Confirm Password">
-            <br><br>
-            <button class="btn" style="width: 100%; background: #28a745; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px; margin-top: 10px;" onclick="location.href='index.html'">Sign Up</button>
+        .error-message {
+            color: red;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 5px;
+            min-height: 16px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <center><h2 id="signup">Sign Up</h2></center>
+        
+        <label>Username:</label>
+        <input type="text" id="username" placeholder="Enter Username">
+        
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Enter Email">
+        
+        <label>Password:</label> 
+        <input type="password" id="password" placeholder="Enter Password">
+        
+        <label>Confirm Password:</label>
+        <input type="password" id="confirm-password" placeholder="Confirm Password">
+        
+        <div id="error-msg" class="error-message"></div>
+        
+        <button class="btn" onclick="validateSignUp()">Sign Up</button>
 
-            <p style="text-align: center; margin-top: 15px;"><a href="userlogin.html">Login</a></p>   
-        </div>
-    </body>
+        <p style="text-align: center; margin-top: 15px;"><a href="userlogin.html">Login</a></p>   
+    </div>
+
+    <script>
+        function validateSignUp() {
+            const usernameValue = document.getElementById("username").value.trim();
+            const emailValue = document.getElementById("email").value.trim();
+            const passwordValue = document.getElementById("password").value.trim();
+            const confirmPasswordValue = document.getElementById("confirm-password").value.trim();
+            const errorElement = document.getElementById("error-msg");
+
+            errorElement.innerText = "";
+
+            if (usernameValue === "") {
+                errorElement.innerText = "Please enter a username.";
+                return;
+            }
+
+            if (emailValue === "") {
+                errorElement.innerText = "Please enter an email address.";
+                return;
+            }
+
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!emailValue.match(emailPattern)) {
+                errorElement.innerText = "Please enter a valid email address.";
+                return;
+            }
+
+            if (passwordValue === "") {
+                errorElement.innerText = "Please enter a password.";
+                return;
+            }
+
+            if (passwordValue.length < 6) {
+                errorElement.innerText = "Password must be at least 6 characters.";
+                return;
+            }
+
+            if (confirmPasswordValue === "") {
+                errorElement.innerText = "Please confirm your password.";
+                return;
+            }
+
+            if (passwordValue !== confirmPasswordValue) {
+                errorElement.innerText = "Passwords do not match.";
+                return;
+            }
+
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
 </html>
