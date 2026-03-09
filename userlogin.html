@@ -41,23 +41,58 @@
         .btn:hover {
             background: #218838;
         }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 5px;
+            min-height: 16px;
+        }
     </style>
 </head>
 <body>
     
     <div class="box">
         <center><h2>Login</h2></center>
+        
         <label>Username:</label>
-        <input type="text" placeholder="Enter Username">
+        <input type="text" id="username" placeholder="Enter Username">
         
         <label>Password:</label>
-        <input type="password" placeholder="Enter Password">
+        <input type="password" id="password" placeholder="Enter Password">
         
-        <button class="btn" onclick="location.href='index.html'">Login</button>
+        <div id="error-msg" class="error-message"></div>
+        
+        <button class="btn" onclick="validateLogin()">Login</button>
 
         <p style="text-align: center; margin-top: 15px;"><a href="SignUp.html">Sign Up</a></p>
-
     </div>
 
+    <script>
+        function validateLogin() {
+            const usernameValue = document.getElementById("username").value.trim();
+            const passwordValue = document.getElementById("password").value.trim();
+            const errorElement = document.getElementById("error-msg");
+
+            errorElement.innerText = "";
+
+            if (usernameValue === "") {
+                errorElement.innerText = "Please enter your username.";
+                return;
+            }
+
+            if (passwordValue === "") {
+                errorElement.innerText = "Please enter your password.";
+                return;
+            }
+
+            if (passwordValue.length < 6) {
+                errorElement.innerText = "Password must be at least 6 characters.";
+                return;
+            }
+
+            window.location.href = 'index.html';
+        }
+    </script>
 </body>
 </html>
